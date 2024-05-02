@@ -16,6 +16,12 @@ import Header from "../../components/Header";
 import { tokens } from "../../theme";
 
 const Calendar = () => {
+  // Inside the component
+const formatDate = (date) => {
+  const options = { year: "numeric", month: "short", day: "numeric" };
+  return new Date(date).toLocaleDateString(undefined, options);
+};
+
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [currentEvents, setCurrentEvents] = useState([]);
@@ -73,7 +79,7 @@ const Calendar = () => {
                   primary={event.title}
                   secondary={
                     <Typography>
-                      {FormData(event.start, {
+                      {formatDate(event.start, {
                         year: "numeric",
                         month: "short",
                         day: "numeric",
