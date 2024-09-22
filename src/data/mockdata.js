@@ -1,4 +1,4 @@
-import { tokens } from "../theme";
+import { tokens } from "../theme"; // Import the tokens function from the theme file
 
 export const mockDataTeam = [
   {
@@ -9,6 +9,7 @@ export const mockDataTeam = [
     phone: "(665)121-5454",
     access: "admin",
   },
+ 
   {
     id: 2,
     name: "Cersei Lannister",
